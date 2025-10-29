@@ -1,0 +1,171 @@
+<svg width="1400" height="900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowblue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#0066CC" />
+    </marker>
+    <marker id="arroworange" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#FF6600" />
+    </marker>
+    <marker id="arrowpurple" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#9933FF" />
+    </marker>
+    <marker id="arrowgreen" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#00AA00" />
+    </marker>
+    <marker id="arrowred" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#CC0000" />
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1400" height="900" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="700" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#333">
+    Multimodal RAG System for Restaurant Recommendations
+  </text>
+  
+  <!-- AWS Cloud Boundary -->
+  <rect x="320" y="120" width="1000" height="650" rx="15" fill="#FFF4E6" stroke="#FF9900" stroke-width="3" stroke-dasharray="10,5"/>
+  <text x="820" y="145" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#FF9900">
+    AWS Cloud Infrastructure
+  </text>
+  
+  <!-- Layer Labels -->
+  <text x="50" y="180" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#666">USER LAYER</text>
+  <text x="50" y="400" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#666">APPLICATION LAYER</text>
+  <text x="360" y="180" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#666">PROCESSING LAYER</text>
+  <text x="1060" y="180" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#666">STORAGE LAYER</text>
+  
+  <!-- User Icon -->
+  <circle cx="110" cy="250" r="20" fill="#dae8fc" stroke="#6c8ebf" stroke-width="2"/>
+  <rect x="90" y="270" width="40" height="50" rx="5" fill="#dae8fc" stroke="#6c8ebf" stroke-width="2"/>
+  <text x="110" y="335" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#333">End User</text>
+  <text x="110" y="350" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#555">(Restaurant App)</text>
+  
+  <!-- Streamlit App -->
+  <rect x="80" y="420" width="180" height="120" rx="10" fill="#b1ddf0" stroke="#10739e" stroke-width="2"/>
+  <text x="170" y="445" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#333">Streamlit Web App</text>
+  <text x="170" y="465" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#333">• Chat Interface</text>
+  <text x="170" y="480" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#333">• User Input Handler</text>
+  <text x="170" y="495" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#333">• Response Display</text>
+  <text x="170" y="510" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#333">• Image Rendering</text>
+  
+  <!-- LangChain -->
+  <path d="M 400,240 L 580,240 L 600,300 L 420,300 Z" fill="#fff2cc" stroke="#d6b656" stroke-width="2"/>
+  <text x="500" y="260" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#333">LangChain</text>
+  <text x="500" y="278" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#333">• RAG Pipeline</text>
+  <text x="500" y="292" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#333">• Prompt Management</text>
+  
+  <!-- AWS Bedrock -->
+  <rect x="680" y="200" width="240" height="140" rx="10" fill="#ffe6cc" stroke="#d79b00" stroke-width="2"/>
+  <text x="800" y="225" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#333">Amazon Bedrock</text>
+  <text x="800" y="245" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#333">• Claude Sonnet (Multimodal LLM)</text>
+  <text x="800" y="260" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#333">• Titan Embeddings (Text)</text>
+  <text x="800" y="275" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#333">• Image Analysis</text>
+  <text x="800" y="290" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#333">• Response Generation</text>
+  
+  <!-- FAISS Vector DB -->
+  <ellipse cx="800" cy="480" rx="80" ry="15" fill="#e1d5e7" stroke="#9673a6" stroke-width="2"/>
+  <rect x="720" y="480" width="160" height="100" fill="#e1d5e7" stroke="#9673a6" stroke-width="2"/>
+  <ellipse cx="800" cy="580" rx="80" ry="15" fill="#d5c5dd" stroke="#9673a6" stroke-width="2"/>
+  <text x="800" y="520" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#333">FAISS Vector DB</text>
+  <text x="800" y="540" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#333">• Similarity Search</text>
+  <text x="800" y="555" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#333">• Semantic Retrieval</text>
+  
+  <!-- Amazon S3 -->
+  <rect x="1040" y="220" width="240" height="120" rx="10" fill="#d5e8d4" stroke="#82b366" stroke-width="2"/>
+  <text x="1160" y="245" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#333">Amazon S3 Data Lake</text>
+  <text x="1160" y="265" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#333">• menu_descriptions_data.csv</text>
+  <text x="1160" y="280" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#333">• restaurant_menu_data.csv</text>
+  <text x="1160" y="295" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#333">• /images folder</text>
+  <text x="1160" y="310" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#333">• Raw Data Storage</text>
+  
+  <!-- FAISS Index Storage -->
+  <ellipse cx="1150" cy="480" rx="70" ry="12" fill="#f8cecc" stroke="#b85450" stroke-width="2"/>
+  <rect x="1080" y="480" width="140" height="80" fill="#f8cecc" stroke="#b85450" stroke-width="2"/>
+  <ellipse cx="1150" cy="560" rx="70" ry="12" fill="#f0b0ae" stroke="#b85450" stroke-width="2"/>
+  <text x="1150" y="510" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#333">FAISS Index</text>
+  <text x="1150" y="530" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#333">• Vector Embeddings</text>
+  <text x="1150" y="545" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#333">• Metadata</text>
+  
+  <!-- Arrows with Labels -->
+  
+  <!-- User to Streamlit -->
+  <path d="M 110,330 L 110,420" stroke="#0066CC" stroke-width="3" fill="none" marker-end="url(#arrowblue)"/>
+  <text x="130" y="375" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#0066CC">Text/Image Query</text>
+  
+  <!-- Streamlit to LangChain -->
+  <path d="M 260,460 L 340,460 L 340,270 L 400,270" stroke="#0066CC" stroke-width="3" fill="none" marker-end="url(#arrowblue)"/>
+  <text x="350" y="365" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#0066CC">User Request</text>
+  
+  <!-- LangChain to Bedrock -->
+  <path d="M 600,270 L 680,270" stroke="#FF6600" stroke-width="3" fill="none" marker-end="url(#arroworange)"/>
+  <text x="610" y="260" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#FF6600">Embedding &amp;</text>
+  <text x="610" y="273" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#FF6600">Generation Request</text>
+  
+  <!-- Bedrock to FAISS (Query) -->
+  <path d="M 800,340 L 800,480" stroke="#9933FF" stroke-width="3" fill="none" marker-end="url(#arrowpurple)"/>
+  <text x="810" y="410" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#9933FF">Vector Search</text>
+  
+  <!-- FAISS to Bedrock (Results) -->
+  <path d="M 820,480 L 820,340" stroke="#9933FF" stroke-width="2" fill="none" stroke-dasharray="5,5" marker-end="url(#arrowpurple)"/>
+  <text x="830" y="410" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#9933FF">Similar Items</text>
+  
+  <!-- S3 to Bedrock -->
+  <path d="M 1040,280 L 920,280" stroke="#00AA00" stroke-width="3" fill="none" marker-end="url(#arrowgreen)"/>
+  <text x="950" y="270" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#00AA00">Load CSV &amp; Images</text>
+  
+  <!-- Bedrock to FAISS Index -->
+  <path d="M 920,300 L 980,300 L 980,520 L 1080,520" stroke="#CC0000" stroke-width="3" fill="none" marker-end="url(#arrowred)"/>
+  <text x="990" y="410" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#CC0000">Store Embeddings</text>
+  
+  <!-- FAISS Index to FAISS DB -->
+  <path d="M 1080,520 L 880,520" stroke="#666666" stroke-width="2" fill="none" stroke-dasharray="5,5"/>
+  <text x="940" y="510" font-family="Arial, sans-serif" font-size="10" fill="#666">Index Access</text>
+  
+  <!-- Bedrock to Streamlit -->
+  <path d="M 680,310 L 320,310 L 320,480 L 260,480" stroke="#0066CC" stroke-width="4" fill="none" marker-end="url(#arrowblue)"/>
+  <text x="280" y="300" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#0066CC">Personalized</text>
+  <text x="280" y="313" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#0066CC">Recommendations</text>
+  
+  <!-- Streamlit to User -->
+  <path d="M 140,420 L 140,360 L 110,360" stroke="#0066CC" stroke-width="4" fill="none" marker-end="url(#arrowblue)"/>
+  <text x="150" y="380" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#0066CC">Display Results</text>
+  <text x="150" y="393" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#0066CC">(Text + Images)</text>
+  
+  <!-- Process Flow Notes -->
+  <rect x="1040" y="380" width="110" height="35" rx="5" fill="#E8F5E9" stroke="#66BB6A" stroke-width="2"/>
+  <text x="1095" y="403" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#2E7D32">1. Data Ingestion</text>
+  
+  <rect x="740" y="150" width="120" height="35" rx="5" fill="#FFF3E0" stroke="#FFB74D" stroke-width="2"/>
+  <text x="800" y="173" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#E65100">2. Embedding</text>
+  
+  <rect x="740" y="610" width="120" height="35" rx="5" fill="#F3E5F5" stroke="#BA68C8" stroke-width="2"/>
+  <text x="800" y="633" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#6A1B9A">3. Retrieval</text>
+  
+  <rect x="540" y="420" width="120" height="35" rx="5" fill="#E3F2FD" stroke="#42A5F5" stroke-width="2"/>
+  <text x="600" y="443" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#0D47A1">4. Generation</text>
+  
+  <!-- Legend -->
+  <rect x="40" y="630" width="260" height="140" rx="8" fill="#f5f5f5" stroke="#666666" stroke-width="2"/>
+  <text x="170" y="655" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#333">Legend</text>
+  
+  <line x1="60" y1="680" x2="130" y2="680" stroke="#0066CC" stroke-width="3" marker-end="url(#arrowblue)"/>
+  <text x="140" y="685" font-family="Arial, sans-serif" font-size="10" fill="#333">User Query Flow</text>
+  
+  <line x1="60" y1="705" x2="130" y2="705" stroke="#FF6600" stroke-width="3" marker-end="url(#arroworange)"/>
+  <text x="140" y="710" font-family="Arial, sans-serif" font-size="10" fill="#333">Data Processing</text>
+  
+  <line x1="60" y1="730" x2="130" y2="730" stroke="#9933FF" stroke-width="3" marker-end="url(#arrowpurple)"/>
+  <text x="140" y="735" font-family="Arial, sans-serif" font-size="10" fill="#333">Vector Operations</text>
+  
+  <line x1="60" y1="755" x2="130" y2="755" stroke="#00AA00" stroke-width="3" marker-end="url(#arrowgreen)"/>
+  <text x="140" y="760" font-family="Arial, sans-serif" font-size="10" fill="#333">Data Storage</text>
+  
+  <!-- IAM Note -->
+  <rect x="1160" y="700" width="120" height="50" rx="5" fill="#f5f5f5" stroke="#666666" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="1220" y="720" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#333">AWS IAM</text>
+  <text x="1220" y="735" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#555">(Secure Access)</text>
+  
+</svg>

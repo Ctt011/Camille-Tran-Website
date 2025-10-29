@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Projects</title>
+    <link href="../style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1>My Projects</h1>
+
+    <!-- Search bar -->
+    <input
+      class="searchBar"
+      type="search"
+      aria-label="Search projects"
+      placeholder="Search projects…"
+    />
+
+    <!-- Filter box -->
+    <div class="filter-container">
+      <h3>Filter Projects</h3>
+      <div class="filter-section">
+        <h4>Year</h4>
+        <div class="filter-options" id="year-filters"></div>
+      </div>
+      <div class="filter-section">
+        <h4>Tags</h4>
+        <div class="filter-options" id="tag-filters"></div>
+      </div>
+      <button class="clear-filters">Clear All Filters</button>
+    </div>
+
+    <!-- Where projects are rendered -->
+    <section class="projects"></section>
+
+    <!-- D3 pie chart logic -->
+    <script type="module" src="projects.js"></script>
+  </body>
+</html>

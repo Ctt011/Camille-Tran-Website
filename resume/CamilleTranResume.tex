@@ -1,0 +1,238 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape Camille Tran} \\ \vspace{8pt}
+    %Huntington Beach, CA \\ \vspace{1pt}
+    %\small 
+    \raisebox{-0.1\height}\faPhone\ 714-350-1220 ~ 
+    \href{mailto:Cttran2021@gmail.com}{\raisebox{-0.2\height}\faEnvelope\ \underline{Cttran2021@gmail.com}} ~ 
+    \href{https://linkedin.com/in/camilletran-datasci}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/camilletran-datasci}} ~ 
+    \href{https://github.com/Ctt011}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/Ctt011}} 
+        \vspace{-8pt}
+\end{center}
+%-----------Career Objective-----------
+\section{Career Objective}
+With a June 2026 anticipated BS degree in Data Science, I have a solid foundation in machine learning and a passion for building AI applications on core development frameworks, including  cloud platforms such as AWS and generative AI platforms. Seeking an entry-level role to utilize skills in Python for industry modeling applications of predictive analytics, diagnostic evaluation, operation optimization, or business-specific support.  I bring a tactical approach, positive “can-do” attitude, and great communication skills.
+\vspace{-8pt}
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of California - San Diego, Major GPA: 3.68}{La Jolla, CA}
+      {Bachelor of Science in Data Science - Halıcıoğlu Data Science Institute}{Expected Graduation: Spring 2026}
+      \vspace{2pt} % <-- small extra space between degree and capstone
+  \resumeSubHeadingListEnd
+\noindent{\small \textbf{Senior Project (Fall 2025 – Winter 2026):} Developing an AI Digital Twin using LLM-augmented frameworks to enhance model accuracy, reduce hallucinations, and enable advanced “what-if” simulations for improved predictive tuning.}
+\vspace{-6pt} % <-- reduces gap before Technical Skills section
+%------RELEVANT COURSEWORK-------
+%\section{Relevant Coursework}
+    %%\resumeSubHeadingListStart
+        %\begin{multicols}{3}
+            %\begin{itemize}[itemsep=-2pt, parsep=3pt]
+                %\item\small Mathematical Theory of Data
+                %\item Data Inference \&\ Prediction
+                %\item Algorithmic Decision Making
+                
+                %\item  Probabilistic Models \&\ ML
+                %\item Data Techniques \&\ Applications
+                %\item Database Management Systems
+                
+                %\item  Data Mining   \item Data Visualization
+                %\item \small Scalable Data Systems
+            %\end{itemize}
+        %\end{multicols}
+        %\vspace*{2.0\multicolsep}
+    %\resumeSubHeadingListEnd
+%-----------PROGRAMMING SKILLS-----------
+%\section{Technical Skills}
+ %\begin{itemize}[leftmargin=0.15in, label={}]
+    %\small{\item{
+     %\textbf{Languages}{: Python (including Pandas, NumPy, Matplotlib), R, Java, C++, SQL, HTML/CSS, MATLAB} \\
+     %\textbf{Developer Tools/Frameworks}{: Linux, Tensorflow, Tableau, Jupyter Notebooks, Git} \\
+     %\textbf{Certifications}{: AWS Cloud Practitioner - July 2023,  AWS Certified Data Engineer - Associate (In Progress)}} \\
+    %}
+ %\end{itemize}
+ %\vspace{-16pt}
+\section{Technical Skills}
+\noindent\small
+\small{\item{
+\textbf{Languages:} Python, R, Java, C++, SQL, Scala, HTML/CSS, MATLAB \\[3pt]
+\textbf{Tools \& Frameworks:} TensorFlow, PySpark, Databricks, Airflow, Kafka, Hive, NiFi, FAISS, Streamlit, Git, Jupyter, Excel, Tableau, Power BI, Linux \\[3pt]
+\textbf{Cloud Platforms:} 
+AWS (S3, EC2, Bedrock, Glue, Athena, Aurora PostgreSQL, DMS, SCT, Timestream, Systems Manager, QuickSight), Azure (Logic Apps, SQL Database) \\[3pt]
+\textbf{Certifications:} AWS Cloud Practitioner (2023), AWS Data Engineer – Associate (In Progress)
+\vspace{-8pt}}}
+
+
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {US State Department - US Embassy London}         {September 2023 -- May 2024}
+      {AI/Data Science Developer  Intern} {}
+      \resumeItemListStart
+        \resumeItem{Designed an AI-driven document retrieval pipeline for policy Q\&A, integrating LangChain for text preprocessing and FAISS for fast vector search across government documents.}
+        \resumeItem{Optimized embedding-based retrieval to improve query accuracy and reduce latency, enhancing policy search responsiveness.}
+        %\resumeItem{Optimized FAISS-based retrieval by improving indexing and embedding storage, boosting search accuracy and query performance.}
+        \resumeItem{Participated actively in Scrum teams, during weekly and daily meetings collaborating effectively to meet project goals.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{-12pt}
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \vspace{4pt}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+            {\textbf{Cloud-Native Multimodal RAG System} $|$ \emph{AWS Bedrock, FAISS, Streamlit}}{September 2025 - Present}
+            \resumeItemListStart
+            \resumeItem{Currently building a multimodal Retrieval-Augmented Generation (RAG) system combining textual and visual data to generate context-aware food recommendations.}
+            \resumeItem{Leveraging AWS Bedrock, S3, and FAISS for cloud-native data storage, vectorization, and scalable similarity search.}
+            \resumeItem{Developing a Streamlit-based chatbot that enables cross-modal search through Claude-Sonnet Multimodal LLM.}
+            \resumeItemListEnd
+            \vspace{-10pt}
+        \resumeProjectHeading
+          {\textbf{Real-Time Big Data Pipeline on AWS} $|$ \emph{NiFi, Kafka, PySpark, Hive, Airflow, Tableau, QuickSight}}{July 2025}
+          \resumeItemListStart
+          \resumeItem{Designed and deployed a real-time data pipeline on AWS to process COVID-19 API data every 5 minutes, leveraging Apache NiFi for ingestion and encryption, and Kafka for distributed message streaming}
+          \resumeItem{Implemented PySpark jobs to transform and clean streaming data, writing outputs to HDFS and exposing curated data through Hive external tables for analytics}
+          \resumeItem{Automated pipeline scheduling using Apache Airflow, ensuring fault-tolerant execution across AWS EC2 nodes }
+          \resumeItem{Delivered interactive KPI dashboards in Tableau and AWS QuickSight, visualizing confirmed, recovered, and fatal case trends by region}
+          \resumeItemListEnd
+          \vspace{-10pt}
+      \resumeProjectHeading
+          {\textbf{Large-Scale Data Processing Pipeline } $|$ \emph{Azure SQL, Databricks, Power BI}}{May 2025}
+          \resumeItemListStart
+          \resumeItem{Built an end-to-end cloud-based data pipeline using the Medallion architecture (Bronze, Silver, Gold layers) in Databricks to process 1M+ rows of European water sensor data, performing scalable transformations, cleansing, and outlier detection with SQL/Scala and Spark.}
+          \resumeItem{Automated ingestion with Azure Logic Apps and designed interactive PowerBI dashboards using DAX measures to monitor KPIs and visualize water quality trends and anomalies.}
+          \resumeItemListEnd
+          \vspace{-10pt}
+      \resumeProjectHeading
+      {\textbf{Shelf of Health: Food Processing Visualization} $|$ \emph{Data Visualization, Statistical Analysis, Excel, Python}}{March 2025}
+          \resumeItemListStart
+          \resumeItem{Awarded Best Project Award, ranking in the top 3\% of 180 students, for a creative and tangible visual design praised for its clarity and evocative storytelling.}
+          \resumeItem{Developed an Excel-based visualization mapping grocery store shelves by food processing levels (NOVA classes), allowing users to intuitively see how “healthy” stores still stock mostly ultra-processed foods.}
+          \resumeItemListEnd 
+          \vspace{-10pt} 
+    \resumeSubHeadingListEnd
+\end{document}
