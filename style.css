@@ -1,0 +1,442 @@
+/* ============================================
+   GLOBAL STYLES - Base styles for all pages
+   ============================================ */
+
+/* Color Scheme Variables */
+html {
+  color-scheme: light dark;
+}
+
+:root {
+  --text-color: canvastext;
+  --background-color: canvas;
+  --border-color: oklch(50% 10% 200 / 40%);
+  --color-accent: oklch(60% 50% 340); /* pinkish fallback */
+}
+
+html {
+  accent-color: var(--color-accent);
+}
+
+/* Base Body Styles */
+body {
+  font-family: "Times New Roman", Times, serif;
+  max-width: 100ch;
+  margin-inline: max(1em, (100% - 100ch) / 2);
+  padding-inline: 1em;
+  line-height: 1.5;
+  background: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+h1 {
+  text-align: center;
+  font-size: 300%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 12pt;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 0.5em;
+}
+
+h3 {
+  font-size: 11pt;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+ul {
+  padding-left: 1em;
+  margin-top: 0.2em;
+  font-size: 11pt;
+}
+
+p, li {
+  font-size: 11pt;
+  margin: 0.2em 0;
+}
+
+/* Form Elements */
+input, textarea, button {
+  font: inherit;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Utility Classes */
+.year {
+  color: gray;
+  font-family: Baskerville, serif;
+  font-variant-numeric: oldstyle-nums;
+  font-size: 0.9em;
+}
+
+
+/* ============================================
+   NAVIGATION - Appears on all pages
+   ============================================ */
+
+nav {
+  display: flex;
+  border-bottom: 1px solid oklch(80% 3% 200);
+  margin-bottom: 2rem;
+}
+
+nav ul,
+nav li {
+  display: contents;
+}
+
+nav a {
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  padding: 0.5em;
+}
+
+nav a.current {
+  border-bottom: 0.4em solid oklch(80% 3% 200);
+  padding-bottom: 0.1em;
+}
+
+nav a:hover {
+  border-bottom: 0.4em solid var(--color-accent);
+  background-color: oklch(from var(--color-accent) 95% 5% h);
+}
+
+/* Color Scheme Switcher */
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 0.8rem;
+  font-family: inherit;
+  z-index: 999;
+}
+
+
+/* ============================================
+   HOME PAGE - index.html
+   ============================================ */
+
+.profile-pic {
+  display: block;
+  margin: 1rem auto;
+  max-width: 300px;
+  height: auto;
+}
+
+.welcome {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+}
+
+
+/* ============================================
+   PROJECTS PAGE - projects/index.html
+   ============================================ */
+
+/* Project Grid View */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 1.5em;
+  margin-top: 2rem;
+}
+
+.projects article {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.projects article:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.projects h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.projects img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 250px;
+  border-radius: 4px;
+}
+
+/* Search Bar */
+.searchBar {
+  width: 100%;
+  max-width: 40em;
+  padding: 0.75em 1em;
+  font-size: 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+  margin-bottom: 1em;
+  transition: border-color 0.2s;
+}
+
+.searchBar:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+/* Filter Container */
+.filter-container {
+  border: 1px solid var(--border-color);
+  padding: 1em;
+  border-radius: 6px;
+  margin-block: 1.5em;
+  background-color: oklch(from var(--color-accent) 98% 2% h);
+}
+
+.filter-container h3 {
+  margin-top: 0;
+  margin-bottom: 0.75em;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.4em;
+}
+
+.filter-section {
+  margin-bottom: 1em;
+}
+
+.filter-section h4 {
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  color: var(--text-color);
+}
+
+.filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
+.filter-pill {
+  padding: 0.35em 0.9em;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1.5px solid var(--border-color);
+  border-radius: 16px;
+  background-color: transparent;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.filter-pill:hover {
+  border-color: var(--color-accent);
+  background-color: oklch(from var(--color-accent) 95% 5% h);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filter-pill.active {
+  background-color: var(--color-accent);
+  color: white;
+  border-color: var(--color-accent);
+  font-weight: 600;
+}
+
+.filter-pill.active:hover {
+  background-color: oklch(from var(--color-accent) 50% 20% h);
+  border-color: oklch(from var(--color-accent) 50% 20% h);
+}
+
+.clear-filters {
+  display: inline-block;
+  padding: 0.4em 0.9em;
+  background-color: var(--color-accent);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.8rem;
+  transition: background-color 0.2s;
+  margin-top: 0.4em;
+}
+
+.clear-filters:hover {
+  background-color: oklch(from var(--color-accent) 50% 20% h);
+}
+
+/* Project Detail View */
+.project-detail {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.back-button {
+  display: inline-block;
+  margin-bottom: 2rem;
+  padding: 0.5em 1em;
+  background-color: var(--color-accent);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+.back-button:hover {
+  background-color: oklch(from var(--color-accent) 50% 20% h);
+}
+
+.detail-content {
+  line-height: 1.6;
+}
+
+.detail-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.detail-meta {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.detail-meta .year {
+  color: gray;
+  font-family: Baskerville, serif;
+  font-variant-numeric: oldstyle-nums;
+  font-size: 1.1em;
+}
+
+.detail-link {
+  padding: 0.5em 1em;
+  background-color: var(--color-accent);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.detail-link:hover {
+  background-color: oklch(from var(--color-accent) 50% 20% h);
+}
+
+.detail-image {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.detail-section {
+  margin-bottom: 2.5rem;
+}
+
+.detail-section h2 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.detail-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+}
+
+.tech-stack li {
+  background-color: oklch(from var(--color-accent) 95% 5% h);
+  color: var(--text-color);
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  border: 1px solid var(--color-accent);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+
+/* ============================================
+   CONTACT PAGE - contact/index.html
+   ============================================ */
+
+form {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1em;
+  max-width: 40rem;
+  margin: 2rem auto;
+}
+
+form label {
+  display: contents;
+}
+
+form span {
+  align-self: center;
+  font-weight: bold;
+}
+
+form button {
+  grid-column: 1 / -1;
+  justify-self: start;
+  padding: 0.5em 1em;
+  background-color: var(--color-accent);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+form button:hover {
+  background-color: oklch(from var(--color-accent) 50% 20% h);
+}
+
+
+/* ============================================
+   RESUME PAGE - resume/index.html
+   Note: Additional styles in inline <style> tag
+   ============================================ */

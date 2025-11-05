@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="View and download Camille Tran's resume highlighting data engineering and machine learning experience."/>
+  <meta name="author" content="Camille Tran"/>
+  <title>Resume - Camille Tran</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .pdf-container {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .pdf-header {
+      padding: 1rem;
+      text-align: center;
+      background-color: var(--background-color);
+    }
+    .pdf-embed {
+      flex: 1;
+      border: none;
+      min-height: 600px;
+    }
+    .download-btn {
+      display: inline-block;
+      margin: 1rem;
+      padding: 0.5em 1em;
+      background-color: var(--color-accent);
+      color: white;
+      text-decoration: none;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      font-family: "Times New Roman", Times, serif;
+    }
+    .download-btn:hover {
+      background-color: oklch(from var(--color-accent) 50% 20% h);
+    }
+  </style>
+</head>
+<body>
+
+<div class="pdf-container">
+  <div class="pdf-header">
+    <a href="CamilleTranResume2025.pdf" download class="download-btn">
+      Download PDF
+    </a>
+  </div>
+
+  <!-- Using <embed> tag for PDF display -->
+  <embed src="CamilleTranResume2025.pdf"
+         type="application/pdf"
+         class="pdf-embed">
+
+  <!-- Fallback for browsers that don't support PDF embedding -->
+  <noscript>
+    <p style="text-align: center; padding: 2rem;">
+      Your browser doesn't support PDF viewing.
+      <a href="CamilleTranResume2025.pdf">Click here to download the PDF</a>
+    </p>
+  </noscript>
+</div>
+
+<script type="module" src="../global.js"></script>
+</body>
+</html>
