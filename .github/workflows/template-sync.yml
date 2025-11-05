@@ -1,0 +1,44 @@
+name: Sync from Template Repository
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 2 * * *'  # Daily at 2 AM UTC
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    name: Sync template changes from Camille-Tran-Web
+    
+    steps:
+      - name: Checkout target repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.TEMPLATE_SYNC_TOKEN2 }}
+      
+      - name: Run template sync
+        uses: AndreasAugustin/actions-template-sync@v2
+        with:
+          source_repo_path: Ctt011/Camille-Tran-Web
+          upstream_branch: main
+          source_repo_ssh_private_key: ''
+          source_gh_token: ${{ secrets.TEMPLATE_SYNC_TOKEN2 }}
+          pr_labels: template-sync,automated
+          pr_title: "🔄 Sync template changes from Camille-Tran-Web"
+          pr_body: |
+            ## Template Sync
+            
+            This PR contains the latest updates from the **Camille-Tran-Web** template repository.
+            
+            ### What's included:
+            - Latest code changes
+            - Bug fixes  
+            - New features
+            
+            ### Action required:
+            ✅ Review the changes
+            ✅ Test locally if needed
+            ✅ Merge when ready
+          
+          pr_branch_name_prefix: template-sync-
+          pr_commit_msg: "chore: sync template changes from Camille-Tran-Web"
