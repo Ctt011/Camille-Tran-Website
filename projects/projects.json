@@ -1,6 +1,6 @@
 [
   {
-    "title": "Cloud-Native Multimodal RAG Syste",
+    "title": "Cloud-Native Multimodal RAG System",
     "slug": "multimodal-rag-system",
     "description": "Building a multimodal Retrieval-Augmented Generation system combining textual and visual data for context-aware food recommendations.",
     "fullDescription": "Currently building a multimodal Retrieval-Augmented Generation (RAG) system that combines textual and visual data to generate context-aware food recommendations. This project leverages AWS Bedrock, S3, and FAISS for cloud-native data storage, vectorization, and scalable similarity search. The system features a Streamlit-based chatbot that enables cross-modal search through Claude-Sonnet Multimodal LLM, allowing users to query with both text and images.",
