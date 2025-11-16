@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bio Layout Demo</title>
+  <style>
+    /* Base Styles */
+    html {
+      color-scheme: light dark;
+    }
+
+    :root {
+      --text-color: canvastext;
+      --background-color: canvas;
+      --border-color: oklch(50% 10% 200 / 40%);
+      --color-accent: oklch(60% 50% 340);
+    }
+
+    body {
+      font-family: "Times New Roman", Times, serif;
+      max-width: 100ch;
+      margin-inline: max(1em, (100% - 100ch) / 2);
+      padding-inline: 1em;
+      line-height: 1.5;
+      background: var(--background-color);
+      color: var(--text-color);
+    }
+
+    h1, h2, h3 {
+      line-height: 1.1;
+      text-wrap: balance;
+    }
+
+    .demo-container {
+      margin: 3rem 0;
+      padding: 2rem;
+      border: 2px dashed var(--border-color);
+      border-radius: 8px;
+    }
+
+    .demo-label {
+      font-size: 0.9rem;
+      font-weight: bold;
+      color: var(--color-accent);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    /* Option 1: Simple Hero */
+    .hero {
+      text-align: center;
+      margin: 2rem auto 3rem;
+      max-width: 50ch;
+    }
+
+    .hero .profile-pic {
+      display: block;
+      margin: 1rem auto;
+      max-width: 300px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin: 1rem 0 0.5rem;
+      text-transform: uppercase;
+    }
+
+    .tagline {
+      font-size: 1.1rem;
+      color: var(--color-accent);
+      margin: 0.5rem 0 1rem;
+      font-weight: bold;
+    }
+
+    .bio {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin: 1rem 0;
+    }
+
+    /* Option 3: Card Style */
+    .intro-card {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 1.5rem;
+      padding: 2rem;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      margin: 2rem auto;
+      background-color: oklch(from var(--color-accent) 98% 2% h);
+      align-items: start;
+    }
+
+    .intro-card h1 {
+      margin: 0;
+      text-align: left;
+      font-size: 1.8rem;
+      text-transform: uppercase;
+    }
+
+    .intro-card .tagline {
+      font-size: 1rem;
+      color: var(--color-accent);
+      margin: 0.5rem 0;
+      font-weight: bold;
+    }
+
+    .profile-pic-small {
+      width: 150px;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+      grid-row: 1 / 3;
+    }
+
+    .role {
+      color: gray;
+      font-size: 1rem;
+      margin: 0.25rem 0;
+    }
+
+    .about-text {
+      grid-column: 1 / -1;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin-top: 0.5rem;
+    }
+
+    /* Separator */
+    hr {
+      margin: 3rem 0;
+      border: none;
+      border-top: 2px solid var(--border-color);
+    }
+  </style>
+</head>
+<body>
+
+  <h2 style="text-align: center; margin-top: 2rem;">Bio Layout Comparison</h2>
+  <p style="text-align: center; color: gray;">Compare the two options below</p>
+
+  <hr>
+
+  <!-- OPTION 1: SIMPLE HERO -->
+  <div class="demo-container">
+    <div class="demo-label">Option 1: Simple Hero (Centered)</div>
+
+    <section class="hero">
+      <img alt="Camille, smiling at the camera" class="profile-pic" src="images/ProfilePic.jpg"/>
+      <h1>Camille Tran</h1>
+      <p class="tagline">Data Engineer | Machine Learning Enthusiast | Cloud Computing Specialist</p>
+      <p class="bio">
+        I build scalable data pipelines and machine learning systems on cloud platforms.
+        Passionate about turning complex data into actionable insights.
+      </p>
+    </section>
+  </div>
+
+  <hr>
+
+  <!-- OPTION 3: CARD STYLE -->
+  <div class="demo-container">
+    <div class="demo-label">Option 3: Card Style (Compact)</div>
+
+    <section class="intro-card">
+      <img alt="Camille" class="profile-pic-small" src="images/ProfilePic.jpg"/>
+      <div>
+        <h1>Camille Tran</h1>
+        <p class="tagline">Data Engineer | Machine Learning Enthusiast | Cloud Computing Specialist</p>
+      </div>
+      <p class="about-text">
+        I build scalable data pipelines and machine learning systems on cloud platforms.
+        Passionate about turning complex data into actionable insights.
+      </p>
+    </section>
+  </div>
+
+  <hr>
+
+  <p style="text-align: center; margin: 3rem 0; color: gray;">
+    Which style do you prefer? Let me know and I'll implement it on your homepage!
+  </p>
+
+</body>
+</html>
