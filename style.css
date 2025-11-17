@@ -137,17 +137,61 @@ nav a:hover {
    HOME PAGE - index.html
    ============================================ */
 
-.profile-pic {
-  display: block;
-  margin: 1rem auto;
-  max-width: 300px;
-  height: auto;
+/* Bio Card Section */
+.intro-card {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  margin: 2rem auto 3rem;
+  background-color: oklch(from var(--color-accent) 98% 2% h);
+  align-items: start;
 }
 
-.welcome {
-  text-align: center;
-  margin-top: 1.5rem;
-  font-size: 1.1rem;
+.intro-card h1 {
+  margin: 0;
+  text-align: left;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+.intro-card .tagline {
+  font-size: 1rem;
+  color: var(--color-accent);
+  margin: 0.5rem 0 1rem;
+  font-weight: bold;
+}
+
+.profile-pic-small {
+  width: 250px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.about-text {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  .intro-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .profile-pic-small {
+    grid-row: auto;
+    margin: 0 auto;
+  }
+
+  .intro-card h1 {
+    text-align: center;
+  }
 }
 
 
