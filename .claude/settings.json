@@ -1,0 +1,5 @@
+{
+  "$schema": "https://raw.githubusercontent.com/anthropics/claude-code/main/schemas/settings.schema.json",
+  "includeCoAuthoredBy": false,
+  "gitAttribution": false
+}
