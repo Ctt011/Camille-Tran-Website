@@ -16,6 +16,7 @@ ehthumbs.db
 Thumbs.db
 
 # Editor directories and files
+.claude/
 .vscode/
 .idea/
 *.swp
