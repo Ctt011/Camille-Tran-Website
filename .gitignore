@@ -38,3 +38,6 @@ CLEANUP_RECOMMENDATIONS.md
 TEMPLATE_SYNC_SETUP.md
 TEMPLATE_SYNC_SETUP.md
 template-sync-for-website.yml
+
+# Claude Code configuration
+.claude/
