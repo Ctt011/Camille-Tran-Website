@@ -1,5 +1,20 @@
 [
   {
+    "title": "Digital Twin for Smart Health monitoring",
+    "slug": "senior-proj-digital-twin",
+    "description": "Senior capstone project developing a digital twin system for smart health applications.",
+    "fullDescription": "Senior capstone project focused on developing a comprehensive digital twin system for smart health monitoring. The system integrates real-time data collection, 3D visualization, and predictive analytics to create a virtual representation of physical health processes. [Additional details to be added]",
+    "techStack": ["Python", "IoT", "Data Analytics", "3D Visualization"],
+    "tags": ["IoT", "Data Engineering", "Machine Learning"],
+    "year": "2024",
+    "image": "images/placeholder-digital-twin.png",
+    "images": [],
+    "githubUrl": "",
+    "liveUrl": "",
+    "challenges": "Integrating real-time sensor data with virtual models while maintaining synchronization and accuracy. [To be expanded]",
+    "learnings": "Gained hands-on experience in IoT systems, real-time data processing, and digital twin architecture. [To be expanded]"
+  },
+  {
     "title": "Cloud-Native Multimodal RAG System",
     "slug": "multimodal-rag-system",
     "description": "Building a multimodal Retrieval-Augmented Generation system combining textual and visual data for context-aware food recommendations.",
