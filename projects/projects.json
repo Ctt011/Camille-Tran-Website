@@ -1,5 +1,20 @@
 [
   {
+    "title": "Multi-Agent AI Assistant System",
+    "slug": "multi-agent-ai-assistant",
+    "description": "Production-ready multi-agent AI system orchestrating specialized agents for weather, web search, and future email/calendar management with interactive CLI.",
+    "fullDescription": "Architected a production-ready multi-agent AI system using Microsoft's AutoGen 0.6.1 framework and OpenAI's GPT-4o, implementing custom interactive CLI with Rich library, SQLite-backed conversation memory with session management, and production-grade configuration/logging infrastructure across 1,100+ lines of Python code. The system demonstrates advanced software architecture with async programming, database design, API integration, and clean separation of concerns across 4 layers (UI → Memory → Orchestration → Agents → External Services). Built modular architecture with ~70% custom implementation including 280-line CLI, 250-line memory system, and integration of 3 external APIs (OpenAI, Tavily Search, Open-Meteo Weather). Designed indexed SQLite schema for conversation analytics with context manager pattern for transaction management, ensuring data consistency and enabling session-based history retrieval.",
+    "techStack": ["Python 3.12", "AutoGen 0.6.1", "OpenAI GPT-4o", "SQLite", "Rich Library", "Tavily API", "asyncio", "FastAPI"],
+    "tags": ["Machine Learning", "AI/ML", "Software Engineering", "Database Design", "Cloud Computing"],
+    "year": "2026",
+    "image": "images/placeholder-multiagent-ai.png",
+    "images": [],
+    "githubUrl": "https://github.com/Ctt011/autogen-multiagent-ai-assistant",
+    "liveUrl": "",
+    "challenges": "Implementing robust asynchronous programming with AutoGen's multi-agent orchestration, designing database connection management with context managers to prevent SQLite file locking, and creating multi-layer error handling for graceful degradation during API failures.",
+    "learnings": "Gained deep expertise in multi-agent AI systems, async Python programming patterns, production-grade configuration and logging practices, database transaction management, and building user-friendly CLI interfaces. Learned to balance cutting-edge AI technology (AutoGen, GPT-4o) with software engineering best practices for maintainable, scalable systems."
+  },
+  {
     "title": "Digital Twin for Smart Health monitoring",
     "slug": "senior-proj-digital-twin",
     "description": "Senior capstone project developing a digital twin system for smart health applications.",
