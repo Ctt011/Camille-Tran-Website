@@ -8,7 +8,11 @@ import { fetchJSON } from '../global.js';
 // ============================================
 let projects = await fetchJSON('./projects.json');
 // Fix image paths to be relative to this subdirectory
-projects = projects.map(p => ({...p, image: '../' + p.image}));
+projects = projects.map(p => ({
+  ...p,
+  image: '../' + p.image,
+  images: (p.images || []).map(img => '../' + img)
+}));
 let query = '';
 let selectedYears = new Set();
 let selectedTags = new Set();
@@ -77,6 +81,22 @@ function showProjectDetail(project) {
   filterContainer.style.display = 'none';
   projectsContainer.className = 'project-detail';
 
+  // Build image gallery HTML
+  const hasMultipleImages = project.images && project.images.length > 0;
+  const allImages = hasMultipleImages ? project.images : [project.image];
+
+  const imageGalleryHTML = hasMultipleImages ? `
+    <div class="image-gallery">
+      ${allImages.map((img, index) => `
+        <img src="${img}" alt="${project.title} - Image ${index + 1}"
+             class="gallery-image" onclick="openLightbox('${img}')">
+      `).join('')}
+    </div>
+  ` : `
+    <img src="${project.image}" alt="${project.title}" class="detail-image"
+         onclick="openLightbox('${project.image}')" style="cursor: pointer;">
+  `;
+
   projectsContainer.innerHTML = `
     <button class="back-button" onclick="window.location.hash = ''">
       ← Back to Projects
@@ -91,7 +111,8 @@ function showProjectDetail(project) {
         ${project.liveUrl ? `<a href="${project.liveUrl}" target="_blank" class="detail-link">Live Demo</a>` : ''}
       </div>
 
-      <img src="${project.image}" alt="${project.title}" class="detail-image">
+      ${imageGalleryHTML}
+      <p class="image-hint">Click image to view full size</p>
 
       <section class="detail-section">
         <h2>About</h2>
@@ -119,7 +140,30 @@ function showProjectDetail(project) {
         </section>
       ` : ''}
     </article>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+      <span class="lightbox-close">&times;</span>
+      <img id="lightbox-img" class="lightbox-content" src="">
+    </div>
   `;
+}
+
+/**
+ * Open lightbox with full-size image
+ */
+window.openLightbox = function(imageSrc) {
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  lightbox.style.display = 'flex';
+  lightboxImg.src = imageSrc;
+}
+
+/**
+ * Close lightbox
+ */
+window.closeLightbox = function() {
+  document.getElementById('lightbox').style.display = 'none';
 }
 
 // ============================================
