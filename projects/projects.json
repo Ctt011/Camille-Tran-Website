@@ -1,5 +1,20 @@
 [
   {
+    "title": "PortOS: Border Traffic Orchestration AIP Agent",
+    "slug": "portos-aip-agent",
+    "description": "AIP Agent on Palantir Foundry that shifts CBP Port of Entry operations from reactive to predictive — projected 52% wait-time reduction.",
+    "fullDescription": "PortOS is an end-to-end AIP Agent built on Palantir Foundry that helps U.S. Customs and Border Protection (CBP) shift land Port of Entry operations from reactive to predictive. The agent ingests 7 datasets covering crossing events, officer shifts, non-intrusive inspection (NII) system status, and port configurations, organizing them into a 5-object ontology (Port, CrossingEvent, OfficerShift, Alert, NiiSystem) with 4 link types for relational reasoning. Three decision functions drive the system: a TypeScript surge detector that flags abnormal crossing volume, a TypeScript lane-configuration recommender that suggests optimal lane mixes, and an AIP Logic wait-time predictor. Two automations trigger real-time alerts surfaced in an operations dashboard when predicted wait times breach thresholds. The narrative demonstrates a shift from a 95-minute reactive response to a 45-minute predictive intervention — a projected 52% reduction — grounded in real CBP BWT, DHS OIG, BTS, and GSA data sources.",
+    "techStack": ["Palantir Foundry", "AIP Agent Studio", "AIP Logic", "TypeScript", "Ontology Modeling", "Actions", "Foundry Workflow"],
+    "tags": ["Data Engineering", "AI/ML", "Government & Public Sector", "Palantir", "Ontology"],
+    "year": "2026",
+    "image": "images/portos_architecture.png",
+    "images": ["images/portos_architecture.png"],
+    "githubUrl": "",
+    "liveUrl": "",
+    "challenges": "Working within Foundry's DevTier constraints (v2 TypeScript Functions only accept string parameters, not ObjectSet), and grounding every operational claim in real federal data sources — CBP Border Wait Times, DHS OIG-25-27, BTS, and GSA — rather than fabricated numbers.",
+    "learnings": "Learned Palantir Foundry's ontology-driven development model end-to-end: Pipeline Builder for data ingestion, Ontology Manager for object/link modeling, AIP Logic for declarative decision functions, Actions for write-backs, and Agent Studio for orchestrating LLM-driven operational workflows. Developed intuition for when to use code-based TypeScript functions vs. declarative AIP Logic, and how to connect real-time data to agent decision-making."
+  },
+  {
     "title": "Multi-Agent AI Assistant System",
     "slug": "multi-agent-ai-assistant",
     "description": "Multi-agent AI system with 2 specialized agents delivering sub-5-second response times, featuring interactive CLI and conversation memory.",
