@@ -16,10 +16,22 @@
 //     - Which pages they viewed and how long they stayed
 
 (function () {
-  const GA_MEASUREMENT_ID = 'G-8NCCT18D9V';
+  // Capture ?ref= parameter and persist across page navigation (always, including localhost)
+  const params = new URLSearchParams(location.search);
+  const ref = params.get('ref');
+  if (ref) {
+    sessionStorage.setItem('portfolio_ref', ref);
 
-  // Skip tracking in local development
-  if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') return;
+    // Clean the ?ref= from the URL bar so the recruiter doesn't see it
+    const cleanUrl = location.pathname + location.hash;
+    history.replaceState(null, '', cleanUrl);
+  }
+
+  // Skip GA4 analytics in local development
+  const isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+  if (isLocal) return;
+
+  const GA_MEASUREMENT_ID = 'G-8NCCT18D9V';
 
   // Load the GA4 script
   const script = document.createElement('script');
@@ -34,12 +46,6 @@
   gtag('js', new Date());
   gtag('config', GA_MEASUREMENT_ID, { send_page_view: false });
 
-  // Capture ?ref= parameter and persist across page navigation
-  const params = new URLSearchParams(location.search);
-  const ref = params.get('ref');
-  if (ref) {
-    sessionStorage.setItem('portfolio_ref', ref);
-  }
   const source = sessionStorage.getItem('portfolio_ref') || 'direct';
 
   // Send page view with referral context
@@ -55,10 +61,6 @@
       recruiter_ref: ref,
       landing_page: location.pathname + location.hash,
     });
-
-    // Clean the ?ref= from the URL bar so the recruiter doesn't see it
-    const cleanUrl = location.pathname + location.hash;
-    history.replaceState(null, '', cleanUrl);
   }
 
   // Track hash changes (for project detail navigation like #portos-aip-agent)

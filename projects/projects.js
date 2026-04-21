@@ -114,6 +114,17 @@ function showProjectDetail(project) {
       ${imageGalleryHTML}
       <p class="image-hint">Click image to view full size</p>
 
+      ${project.videoUrl ? `
+        <section class="detail-section">
+          <h2>Demo Video</h2>
+          <div class="video-container">
+            <iframe src="${project.videoUrl}" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </section>
+      ` : ''}
+
       <section class="detail-section">
         <h2>About</h2>
         <p>${project.fullDescription}</p>
