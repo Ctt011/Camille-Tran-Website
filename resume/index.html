@@ -47,24 +47,36 @@
 
 <div class="pdf-container">
   <div class="pdf-header">
-    <a href="Camille_Tran_Resume2026.pdf" download class="download-btn">
+    <a href="CamilleResume2026_DE.pdf"
+       download="CamilleResume2026_DE.pdf"
+       class="download-btn"
+       onclick="trackResumeDownload()">
       Download PDF
     </a>
   </div>
 
-  <!-- Using <embed> tag for PDF display -->
-  <embed src="Camille_Tran_Resume2026.pdf"
+  <embed src="CamilleResume2026_DE.pdf"
          type="application/pdf"
          class="pdf-embed">
 
-  <!-- Fallback for browsers that don't support PDF embedding -->
   <noscript>
     <p style="text-align: center; padding: 2rem;">
       Your browser doesn't support PDF viewing.
-      <a href="Camille_Tran_Resume2026.pdf">Click here to download the PDF</a>
+      <a href="CamilleResume2026_DE.pdf">Click here to download the PDF</a>
     </p>
   </noscript>
 </div>
+
+<script>
+  function trackResumeDownload() {
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'resume_download', {
+        file_name: 'CamilleResume2026_DE.pdf',
+        referral_source: sessionStorage.getItem('portfolio_ref') || 'direct',
+      });
+    }
+  }
+</script>
 
 <script type="module" src="../global.js"></script>
 </body>
