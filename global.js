@@ -3,7 +3,7 @@ let pages = [
   { url: "", title: "Home" },
   { url: "projects/", title: "Projects" },
   { url: "contact/", title: "Contact" },
-  { url: "resume/", title: "Resume" },
+  // { url: "resume/", title: "Resume" }, // ARCHIVED: copy ../Camille-Website-Archive/resume back here and uncomment to restore
   { url: "https://github.com/Ctt011", title: "GitHub" },
 ];
 
